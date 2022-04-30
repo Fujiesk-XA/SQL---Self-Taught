@@ -1,5 +1,5 @@
 # SQL---Self-Taught
-
+#Remember to goTO Services when finish or start oracle services
 <pir>
 
   
