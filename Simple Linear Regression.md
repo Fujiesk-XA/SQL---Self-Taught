@@ -1,23 +1,23 @@
 
 
-Simple linear regression =
-VAR Known =
-    FILTER (
-        SELECTCOLUMNS (
-            ALLSELECTED ( Table[Column] ),
-            "Known[X]", [Measure X],
-            "Known[Y]", [Measure Y]
-        ),
-        AND (
-            NOT ( ISBLANK ( Known[X] ) ),
-            NOT ( ISBLANK ( Known[Y] ) )
-        )
-    )
-VAR SlopeIntercept =
-    LINESTX(Known, Known[Y], Known[X])
-VAR Slope =
-    SELECTCOLUMNS(SlopeIntercept, [Slope1])
-VAR Intercept = 
-    SELECTCOLUMNS(SlopeIntercept, [Intercept])
-RETURN
-    Intercept + Slope * [Measure X]
+(div/)Simple linear regression =
+(div/)VAR Known =
+(div/)    FILTER (
+(div/)        SELECTCOLUMNS (
+(div/)            ALLSELECTED ( Table[Column] ),
+(div/)            "Known[X]", [Measure X],
+(div/)            "Known[Y]", [Measure Y]
+(div/)        ),
+(div/)        AND (
+(div/)            NOT ( ISBLANK ( Known[X] ) ),
+(div/)            NOT ( ISBLANK ( Known[Y] ) )
+(div/)       )
+(div/)    )
+(div/)VAR SlopeIntercept =
+(div/)    LINESTX(Known, Known[Y], Known[X])
+(div/)VAR Slope =
+(div/)    SELECTCOLUMNS(SlopeIntercept, [Slope1])
+(div/)VAR Intercept = 
+(div/)    SELECTCOLUMNS(SlopeIntercept, [Intercept])
+(div/)RETURN
+(div/)    Intercept + Slope * [Measure X]
