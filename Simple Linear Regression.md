@@ -1,9 +1,7 @@
-
-
 Simple linear regression =
-<pir>
+
 VAR Known =
-</pir>
+
     FILTER (
         SELECTCOLUMNS (
             ALLSELECTED ( Table[Column] ),
