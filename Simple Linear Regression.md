@@ -13,11 +13,16 @@ VAR Known =
             NOT ( ISBLANK ( Known[Y] ) )
        )
     )
+
 VAR SlopeIntercept =
     LINESTX(Known, Known[Y], Known[X])
+    
 VAR Slope =
     SELECTCOLUMNS(SlopeIntercept, [Slope1])
+    
 VAR Intercept = 
     SELECTCOLUMNS(SlopeIntercept, [Intercept])
+    
 RETURN
+
     Intercept + Slope * [Measure X]
