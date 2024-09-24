@@ -3,6 +3,7 @@ DiscountCategory =
 Var DiscountPct = Divide ( Sales[Unit Discount], Sales[Unit Price])
 
 Return
+
   If (
       DiscountPct = 0,
       "FULL PRICE",
