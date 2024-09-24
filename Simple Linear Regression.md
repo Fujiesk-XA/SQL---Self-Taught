@@ -1,7 +1,7 @@
 
 
 Simple linear regression =
-</pir>
+<pir>
 VAR Known =
 </pir>
     FILTER (
